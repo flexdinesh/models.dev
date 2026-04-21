@@ -14,7 +14,7 @@ Add a tiny scheduler workflow on default branch `dev` that calls a reusable work
 - Run `bun install` in CI so `bun.lock` is regenerated in the assembled tree
 - Gate push to `dev` on successful `packages/web-fast` build
 - Use caller-workflow concurrency with `cancel-in-progress: true`
-- Use a dedicated secret token for pushes that modify `.github/workflows/*` on `dev`
+- Use a dedicated secret token `WORKFLOW_WRITE_TOKEN` for pushes that modify `.github/workflows/*` on `dev`
 - Leave a placeholder deploy step after successful push
 
 ## Tests Or Verification
